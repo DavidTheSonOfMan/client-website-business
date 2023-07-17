@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>The Cutting Corner Booking Page</title>
+    <!-- <link rel="stylesheet" href="css/style2.css"> -->
+	<link rel="stylesheet" href="booking.css">
+
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+	<!-- Font -->
+	<!-- <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700,900" rel="stylesheet"> -->
+</head>
+<body>
+     
+  <nav>
+    <div class="navbar">
+      <i class='bx bx-menu'></i>
+      <div class="logo"><a href="index2.html">THE CUTTING CORNER</a></div>
+      <div class="nav-links">
+        <div class="sidebar-logo">
+          <span class="logo-name">THE CUTTING CORNER</span>
+          <i class='bx bx-x' ></i>
+        </div>
+        <ul class="links">
+          <li><a href="index2.html">HOME</a></li>
+          <li>
+            <a href="gallery.html">GALLERY</a>
+            <ul class="htmlCss-sub-menu sub-menu">
+            </ul>
+          </li>
+        
+          <li><a href="service.html">SERVICE</a></li>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="contact.html">CONTACT US</a></li>
+        
+        </ul>
+      </div>
+      <div class="search-box">
+        <i class='bx bx-user'></i>
+        <div class="input-box">
+          <!-- <input type="text" placeholder="Search..."> -->
+          <div class="logout-section">
+                 <!-- <button id="signout">Sign Out</button> -->
+        <div class="icon"><i class="bx bx-user"></i></div>
+
+        <div class="line">
+        <p id="user1">Logged in as: </p>
+        <p id="user"></p>
+    </div>
+
+        <div class="field">       
+            <button id="signout" type="submit">Logout</button>
+        </div>
+<script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <script>
+    // search-box open close js code
+let navbar = document.querySelector(".navbar");
+let searchBox = document.querySelector(".search-box .bx-user");
+// let searchBoxCancel = document.querySelector(".search-box .bx-x");
+
+searchBox.addEventListener("click", ()=>{
+navbar.classList.toggle("showInput");
+if(navbar.classList.contains("showInput")){
+searchBox.classList.replace("bx-user" ,"bx-x");
+}else {
+searchBox.classList.replace("bx-x" ,"bx-user");
+}
+});
+
+// sidebar open close js code
+let navLinks = document.querySelector(".nav-links");
+let menuOpenBtn = document.querySelector(".navbar .bx-menu");
+let menuCloseBtn = document.querySelector(".nav-links .bx-x");
+menuOpenBtn.onclick = function() {
+navLinks.style.left = "0";
+}
+menuCloseBtn.onclick = function() {
+navLinks.style.left = "-100%";
+}
+
+
+// sidebar submenu open close js code
+let htmlcssArrow = document.querySelector(".htmlcss-arrow");
+htmlcssArrow.onclick = function() {
+navLinks.classList.toggle("show1");
+}
+let moreArrow = document.querySelector(".more-arrow");
+moreArrow.onclick = function() {
+navLinks.classList.toggle("show2");
+}
+let jsArrow = document.querySelector(".js-arrow");
+jsArrow.onclick = function() {
+navLinks.classList.toggle("show3");
+}
+</script>
+
+
+
+
+<div class="wrapper">
+	<div class="container">
+		<div class="container-time">
+				<h2 class="heading">Time Open</h2>
+				<h3 class="heading-days">Monday-Saturday</h3>
+				<p>9am - 9am </p>
+				<p>9am - 9am </p>
+
+				<h3 class="heading-days"> sunday</h3>
+				<p>Closed</p>
+				
+
+				<hr>
+
+				<h4 class="heading-phone">Call Us: (+234) 475-745-456</h4>
+		</div>
+
+		<div class="container-form">
+				<form action="https://formsubmit.co/el/bazebo" method="post">
+					<h2 class="heading heading-yellow">Booking Online</h2>
+
+					<div class="form-field">
+						<p>Your Name</p>
+						<input type="text" name="name" placeholder="Your Name">
+					</div>
+					<div class="form-field">
+						<p>Your email</p>
+						<input type="email" name="email" placeholder="Your email">
+					</div>
+					<div class="form-field">
+						<p>Date</p>
+						<input type="date" name="date">
+					</div>
+					<div class="form-field">
+						<p>Time</p>
+						<input type="time" name="time">
+					</div>
+					<div class="form-field">
+						<p>Choose your style</p>
+						<select name="select" name="hair style" id="#">
+							<option value="1">Choose your style</option>
+							<option value="2">HairCut</option>
+							<option value="3">Beard Trim</option>
+							<option value="4">Man Shave</option>
+							<option value="5">Hair Dyeing</option>
+							<option value="5+">Mustache</option>
+							<option value="5+">Stacking</option>
+						</select>
+					</div>
+					<div class="form-field">
+						<p>How many people?</p>
+						<select name="select" name="number of people" id="#">
+							<option value="1">1 person</option>
+							<option value="2">2 persons</option>
+							<option value="3">3 persosn</option>
+							<option value="4">4 persons</option>
+							<option value="5">5 persons</option>
+							<option value="5+">5+ persons</option>
+						</select>
+					</div>
+
+					<button class="btn">Submit</button>
+				</form>
+		</div>
+	</div>
+</div>	
+<!-- 
+ =======>==>====>SECTION======10=====start======== --> 
+
+-<footer class="footer">
+
+    <div class="footer-bx1">
+
+        <div class="footer-bx1-row1">
+            <div class="footer-bx1-row1-h1">
+                <h1>Salon Address</h1>
+            </div>
+            <div class="footer-bx1-row1-text">
+                <p><i class='bx bxs-map'></i>32b idowu martins str, V.I, Lagos</p>
+                <p><i class='bx bxs-phone'></i>+234-706-314-3426</p>
+                <p><i class='bx bx-message'></i>info@thecuttingcorner.com</p>
+                <div class="footer-social-icon">
+                    <a href="#" target="_blank"><i class='bx bxl-facebook-circle'></i></a>
+                    <a href="#" target="_blank"><i class='bx bxl-twitter'></i></a>
+                    <a href="#" target="_blank"><i class='bx bxl-instagram'></i></a>
+                    <a href="#" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+                    <a href="#" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bx1-row2">
+            <div class="footer-bx1-row2-h1">
+                <h1>Quick Links</h1>
+            </div>
+
+            <div class="footer-bx1-row2-text">
+            <a href="#">
+            <p><i class='bx bx-right-arrow'></i> Terms of use</p>
+            </a>
+            <a href="#">
+            <p><i class='bx bx-right-arrow'></i> Privacy Policy</p>
+            </a>
+            <a href="#">
+            <p><i class='bx bx-right-arrow'></i>Cookies</p>
+            </a>
+            <a href="#">
+            <p><i class='bx bx-right-arrow'></i> Help</p>
+            </a>
+            <a href="#">
+            <p><i class='bx bx-right-arrow'></i>FAQS</p>
+            </a>
+            </div>
+
+
+        </div>
+        
+        <div class="footer-bx1-row3">
+            <div class="footer-bx1-row3-h1">
+                <h1>Newsletter</h1>
+            </div>
+            <div class="footer-bx1-row3-text">
+              <p>Welcome to the latest edition of our <br>
+                Barbing Buzz newsletter! We're here to keep <br>
+                 you in the loop with the hottest trends, grooming <br
+                 > tips, and exclusive offers to elevate your grooming game.
+                    
+           </p>
+            </div>
+            <div class="footer-bx1-row3-input">
+                <input type="text" placeholder="Email goes here" required>
+                <button type="submit">Submit</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bx2">
+        <div class="footer-bx2-row1">
+            <p>C <a href="#">Barber shop</a>, All Right Reserved.</p>
+        </div>
+        <div class="footer-bx2-row2">
+            <p>Designed By<a href="#">David Augustine</a></p>
+        </div>
+
+    </div>
+
+</footer> 
+<script src="signout.js"></script>
+</body>
+</html>

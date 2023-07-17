@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hair Barbing Website</title>
+        <!-- CSS Libraries -->
+        <link rel="stylesheet" href="css/style2.css">
+
+
+        <!-- ----------carousel-------------------- -->
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+
+
+        <!-- ===== Boxicons CSS ===== -->
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+
+    </head>
+
+    <body>
+           <!-- --------------------scroll up---------------------------- -->
+
+<button onclick="topFunction()" id="myBtn" title="Go to top"> <i class='bx bx-chevron-up' ></i> </button>
+
+<script>
+    // Get the button
+    let mybutton = document.getElementById("myBtn");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
+
+
+        <!-- Boxicons CDN Link -->
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+        <nav>
+            <div class="navbar">
+                <i class='bx bx-menu'></i>
+                <div class="logo"><a href="index2.html">THE CUTTING CORNER</a></div>
+                <div class="nav-links">
+                    <div class="sidebar-logo">
+                        <span class="logo-name">THE CUTTING CORNER</span>
+                        <i class='bx bx-x'></i>
+                    </div>
+                    <ul class="links">
+                        <li><a href="index2.html">HOME</a></li>
+                        <li>
+                            <a href="gallery.html">GALLERY</a>
+                            <ul class="htmlCss-sub-menu sub-menu">
+                            </ul>
+                        </li>
+
+                        <li><a href="service.html">SERVICE</a></li>
+                        <li><a href="about.html">ABOUT US</a></li>
+                        <li><a href="contact.html">CONTACT US</a></li>
+
+                    </ul>
+                </div>
+                <div class="search-box">
+                    <i class='bx bx-user'></i>
+                    <div class="input-box">
+                        <!-- <input type="text" placeholder="Search..."> -->
+                        <div class="logout-section">
+                            <!-- <button id="signout">Sign Out</button> -->
+                            <div class="icon"><i class="bx bx-user"></i></div>
+
+                            <div class="line">
+                                <p id="user1">Logged in as: </p>
+                                <p id="user"></p>
+                            </div>
+
+                            <div class="field">
+                                <button id="signout" type="submit">Logout</button>
+                            </div>
+                            <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+                            <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <script>
+            // search-box open close js code
+            let navbar = document.querySelector( ".navbar" );
+            let searchBox = document.querySelector( ".search-box .bx-user" );
+            // let searchBoxCancel = document.querySelector(".search-box .bx-x");
+
+            searchBox.addEventListener( "click", () =>
+            {
+                navbar.classList.toggle( "showInput" );
+                if ( navbar.classList.contains( "showInput" ) )
+                {
+                    searchBox.classList.replace( "bx-user", "bx-x" );
+                } else
+                {
+                    searchBox.classList.replace( "bx-x", "bx-user" );
+                }
+            } );
+
+            // sidebar open close js code
+            let navLinks = document.querySelector( ".nav-links" );
+            let menuOpenBtn = document.querySelector( ".navbar .bx-menu" );
+            let menuCloseBtn = document.querySelector( ".nav-links .bx-x" );
+            menuOpenBtn.onclick = function ()
+            {
+                navLinks.style.left = "0";
+            }
+            menuCloseBtn.onclick = function ()
+            {
+                navLinks.style.left = "-100%";
+            }
+
+
+            // sidebar submenu open close js code
+            let htmlcssArrow = document.querySelector( ".htmlcss-arrow" );
+            htmlcssArrow.onclick = function ()
+            {
+                navLinks.classList.toggle( "show1" );
+            }
+            let moreArrow = document.querySelector( ".more-arrow" );
+            moreArrow.onclick = function ()
+            {
+                navLinks.classList.toggle( "show2" );
+            }
+            let jsArrow = document.querySelector( ".js-arrow" );
+            jsArrow.onclick = function ()
+            {
+                navLinks.classList.toggle( "show3" );
+            }
+        </script>
+
+
+
+
+
+
+        <!-- =======>==>====>SECTION======1======== -->
+
+        <section class="sect1">
+            <div id="home">
+                <div class="overlay">
+                    <div class="landing-text">
+                        <h3>Getting your hair ready</h3>
+                        <h1>The Cutting Corner</h1>
+                        <hr id="hr-main">
+                        <a href="booking.html" class="button btn-hire"> Book Appointment</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- =======>==>====>SECTION======2======== -->
+        <section class="sect2 bd-grid">
+
+            <div class="sect2-box1">
+                <div class="box1-1"></div>
+                <div class="box1-2">
+                    <h2>20 YEARS</h2>
+                    <h2>EXPERIENCE</h2>
+                </div>
+            </div>
+
+            <div class="sect2-box2">
+                <div class="box2-about">
+                    <h2>About Us</h2>
+                </div>
+                <div class="box2-h1">
+                    <h1>
+                        MORE THAN JUST A HAIRCUT. <br> LEARN MORE ABOUT US!
+                    </h1>
+                </div>
+                <div class="box2-p">
+                    <p> Welcome to The Cutting Corner, your destination for exceptional <br>
+                        men's grooming services. With a team of skilled barbers, we offer <br>
+                        precision haircuts, beard grooming, shaving, and hair styling services. <br>
+                        Our barbers are passionate about creating personalized styles that leave <br>
+                        you looking and feeling your best. Visit us at The Cutting Corner and <br>
+                        experience the art of grooming with us. </p>
+
+                </div>
+                <div class="box2-bottom">
+                    <div class="box2-bottom-text">
+                        <h1>SINCE 2003</h1>
+                        <p>
+                            With over two decades of <br>
+                            experience since its <br>
+                            establishment in 2002, our <br>
+                            company has grown and evolved, <br>
+                            leaving a trail of success <br>
+                            and satisfied customers <br>
+                            in its wake.
+                        </p>
+
+                    </div>
+                    <div class="box2-bottom-text2">
+                        <h1>1000+ CLIENTS</h1>
+                        <p>
+                            We are grateful for the trust <br>
+                            and support we have received <br>
+                            from our customers, employees, <br>
+                            and partners over the years <br>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =======>==>====>SECTION======3======== -->
+
+        <section class="sect3">
+            <div class="sect3-box1">
+                <p>Services.</p>
+                <h1>Best Salon & Barber Services <br> For You</h1>
+            </div>
+
+            <div class="sect3-box2">
+
+                <div class="sect3-service1">
+
+                    <div class="service1-box1">
+                        <div class="service1-box1-icon"></div>
+                    </div>
+                    <div class="service1-box2">
+                        <h1>HAIRCUT</h1>
+                        <h3> shaping hair to achieve a desired <br>
+                            look or maintain a particular hairstyle
+                        </h3>
+                        <p>FROM #5,000</p>
+                    </div>
+
+                </div>
+                <div class="sect3-service2">
+
+                    <div class="service2-box1">
+                        <div class="service2-box1-icon"></div>
+                    </div>
+                    <div class="service2-box2">
+                        <h1>BEARD TRIM</h1>
+                        <h3>A grooming service specifically <br>
+                            tailored to trimming, shaping <br>
+                        </h3>
+                        <p>FROM #3,000</p>
+                    </div>
+
+                </div>
+                <div class="sect3-service3">
+
+                    <div class="service3-box1">
+                        <div class="service3-box1-icon"></div>
+                    </div>
+                    <div class="service3-box2">
+                        <h1>MANS SHAVE</h1>
+                        <h3> providing a clean and smooth <br>
+                            finish, tailored specifically <br>
+
+                        </h3>
+                        <p>FROM #5,000</p>
+                    </div>
+
+                </div>
+                <div class="sect3-service4">
+
+                    <div class="service4-box1">
+                        <div class="service4-box1-icon"></div>
+                    </div>
+                    <div class="service4-box2">
+                        <h1>HAIR DYEING</h1>
+                        <h3>changing the color of hair, <br>
+                            either subtly or dramatically, <br>
+
+                        </h3>
+                        <p>FROM #10,000</p>
+                    </div>
+
+                </div>
+                <div class="sect3-service5">
+
+                    <div class="service5-box1">
+                        <div class="service1-box1-icon"></div>
+                    </div>
+                    <div class="service5-box2">
+                        <h1>MUSTACHE</h1>
+                        <h3>cial hair grown specifically <br>
+                            above the upper lip, often <br>
+
+                        </h3>
+                        <p>FROM #5,000</p>
+                    </div>
+
+                </div>
+                <div class="sect3-service6">
+
+                    <div class="service6-box1">
+                        <div class="service6-box1-icon"></div>
+                    </div>
+                    <div class="service6-box2">
+                        <h1>STACKING</h1>
+                        <h3>stacking hair at specific angles <br>
+                            or lengths to create volume, texture, <br>
+
+                        </h3>
+                        <p>FROM #5,000</p>
+                    </div>
+
+                </div>
+        </section>
+
+        <!-- =======>==>====>SECTION======4======== -->
+
+
+        <section class="sect4">
+            <div class="sect4-box1">
+                <p>Our Best Pricing</p>
+                <h1>We Provide Best Price in the <br> City</h1>
+            </div>
+
+            <div class="sect4-box2">
+
+                <!-- --col----1----- -->
+
+                <div class="sect4-box2-col1">
+                    <div class="s4-bx2-col1-cube11">
+                        <div class="s4-bx2-col1-cb1-line"></div>
+                    </div>
+                    <div class="s4-bx2-col1-cube2">
+                        <p class="p">Hair Cut</p>
+                        <p># 5,000</p>
+                    </div>
+                </div>
+                <!-- -------col--- 2-->
+                <div class="sect4-box2-col1">
+                    <div class="s4-bx2-col1-cube22">
+                        <div class="s4-bx2-col1-cb1-line"></div>
+                    </div>
+                    <div class="s4-bx2-col1-cube2">
+                        <p class="p">Hair Wash</p>
+                        <p># 4,000</p>
+                    </div>
+                </div>
+
+                <!-- ----col---3---- -->
+
+                <div class="sect4-box2-col1">
+                    <div class="s4-bx2-col1-cube33">
+                        <div class="s4-bx2-col1-cb1-line"></div>
+                    </div>
+                    <div class="s4-bx2-col1-cube2">
+                        <p class="p">Hair Color</p>
+                        <p># 10,000</p>
+                    </div>
+                </div>
+
+                <!-- -----col----4-- -->
+
+
+                <div class="sect4-box2-col1">
+                    <div class="s4-bx2-col1-cube44">
+                        <div class="s4-bx2-col1-cb1-line"></div>
+                    </div>
+                    <div class="s4-bx2-col1-cube2">
+                        <p class="p">Hair Shave</p>
+                        <p># 3,000</p>
+                    </div>
+                </div>
+
+                <!-- ----col---5---- -->
+
+                <div class="sect4-box2-col1">
+                    <div class="s4-bx2-col1-cube55">
+                        <div class="s4-bx2-col1-cb1-line"></div>
+                    </div>
+                    <div class="s4-bx2-col1-cube2">
+                        <p class="p">Hair Straight</p>
+                        <p># 5,000</p>
+                    </div>
+                </div>
+
+                <!-- ------col---6-- -->
+
+                <div class="sect4-box2-col1">
+                    <div class="s4-bx2-col1-cube66">
+                        <div class="s4-bx2-col1-cb1-line"></div>
+                    </div>
+                    <div class="s4-bx2-col1-cube2">
+                        <p class="p">Facial</p>
+                        <p># 5,000</p>
+                    </div>
+                </div>
+
+                <!-- ----col----7--- -->
+
+                <div class="sect4-box2-col1">
+                    <div class="s4-bx2-col1-cube77">
+                        <div class="s4-bx2-col1-cb1-line"></div>
+                    </div>
+                    <div class="s4-bx2-col1-cube2">
+                        <p class="p">Shampoo</p>
+                        <p># 5,000</p>
+                    </div>
+                </div>
+                <!-- ----col----8--- -->
+
+                <div class="sect4-box2-col1">
+                    <div class="s4-bx2-col1-cube88">
+                        <div class="s4-bx2-col1-cb1-line"></div>
+                    </div>
+                    <div class="s4-bx2-col1-cube2">
+                        <p class="p">Beard Trim</p>
+                        <p># 2,500</p>
+                    </div>
+                </div>
+                <!-- ----col----9--- -->
+
+                <div class="sect4-box2-col1">
+                    <div class="s4-bx2-col1-cube99">
+                        <div class="s4-bx2-col1-cb1-line"></div>
+                    </div>
+                    <div class="s4-bx2-col1-cube2">
+                        <p class="p">Wedding Cut</p>
+                        <p># 25,000</p>
+                    </div>
+                </div>
+                <!-- ----col----10--- -->
+
+                <div class="sect4-box2-col1">
+                    <div class="s4-bx2-col1-cube1010">
+                        <div class="s4-bx2-col1-cb1-line"></div>
+                    </div>
+                    <div class="s4-bx2-col1-cube2">
+                        <p class="p">Beard Shave</p>
+                        <p># 3,000</p>
+                    </div>
+                </div>
+                <!-- ----col----11--- -->
+
+                <div class="sect4-box2-col1">
+                    <div class="s4-bx2-col1-cube1111">
+                        <div class="s4-bx2-col1-cb1-line"></div>
+                    </div>
+                    <div class="s4-bx2-col1-cube2">
+                        <p class="p">Clean Up</p>
+                        <p># 5,000</p>
+                    </div>
+                </div>
+                <!-- ----col----12--- -->
+
+                <div class="sect4-box2-col1">
+                    <div class="s4-bx2-col1-cube1212">
+                        <div class="s4-bx2-col1-cb1-line"></div>
+                    </div>
+                    <div class="s4-bx2-col1-cube2">
+                        <p class="p">Massage</p>
+                        <p># 10,000</p>
+                    </div>
+                </div>
+
+                <!-- col-----END------ -->
+            </div>
+        </section>
+
+        <!-- =======>==>====>SECTION======5======== -->
+
+        <section class="sect5">
+            <div class="sect5-box1">
+                <p>Our Barber Team</p>
+                <h1>Meet Our Hair Cut Expert <br> Barber</h1>
+            </div>
+
+            <div class="sect5-box2">
+
+                <!-- ---------col------1----------- -->
+                <div class="sect5-box2-col1">
+                    <div class="sect5-box2-col1-cube11">
+                        <div class="sect5-box2-col1-cube1-line"></div>
+                    </div>
+
+                    <div class="sect5-box2-col1-cube2">
+                        <h3>Adams Phillips</h3>
+                        <p>Master Barber</p>
+                    </div>
+                </div>
+                <!-- ---------col------2------ -->
+                <div class="sect5-box2-col1">
+                    <div class="sect5-box2-col1-cube22">
+                        <div class="sect5-box2-col1-cube1-line"></div>
+                    </div>
+
+                    <div class="sect5-box2-col1-cube2">
+                        <h3>Dylan Adams</h3>
+                        <p>Hair Expert</p>
+                    </div>
+                </div>
+
+                <!-- -------col-----3------- -->
+                <div class="sect5-box2-col1">
+                    <div class="sect5-box2-col1-cube33">
+                        <div class="sect5-box2-col1-cube1-line"></div>
+                    </div>
+
+                    <div class="sect5-box2-col1-cube2">
+                        <h3>Adams Smith</h3>
+                        <p>Beard Expert</p>
+                    </div>
+                </div>
+                <!-- -------col-----4------- -->
+                <div class="sect5-box2-col1">
+                    <div class="sect5-box2-col1-cube44">
+                        <div class="sect5-box2-col1-cube1-line"></div>
+                    </div>
+
+                    <div class="sect5-box2-col1-cube2">
+                        <h3>Josh Dunn</h3>
+                        <p>Color Expert</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- =======>==>====>SECTION======6======== -->
+
+        <section class="sect6">
+
+            <div class="sect6-box1"></div>
+
+            <div class="sect6-box2">
+
+                <div class="sect6-box2-row1">
+                    <h3>Working Hours</h3>
+                </div>
+
+                <div class="sect6-box2-row2">
+                    <h1>PROFESSIONAL BARBERS <br> ARE WAITING FOR YOU</h1>
+                </div>
+
+                <div class="sect6-box2-row3">
+                    <div class="sect6-box2-row3-cube1">
+                        <h3>MONDAY</h3>
+                        <p>09 AM - 09 PM</p>
+                    </div>
+
+                    <div class="sect6-box2-row3-cube1">
+                        <h3>TUESDAY</h3>
+                        <p>09 AM - 09 PM</p>
+                    </div>
+
+                    <div class="sect6-box2-row3-cube1">
+                        <h3>WEDNESDAY</h3>
+                        <p>09 AM - 09 PM</p>
+                    </div>
+
+                    <div class="sect6-box2-row3-cube1">
+                        <h3>THURSDAY</h3>
+                        <p>09 AM - 09 PM</p>
+                    </div>
+
+                    <div class="sect6-box2-row3-cube1">
+                        <h3>FRIDAY</h3>
+                        <p>09 AM - 09 PM</p>
+                    </div>
+
+                    <div class="sect6-box2-row3-cube1">
+                        <h3>SAT / SUN</h3>
+                        <p class="cp">CLOSED</p>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =======>==>====>SECTION======7======== -->
+
+        <section class="sect7">
+            <div class="sect7-box1">
+                <p>Testimonial</p>
+                <h1>WHAT OUR CLIENTS SAY!</h1>
+            </div>
+            <div class="sect7-box2">
+
+                <!-- -------------1-------------- -->
+                <div class="sect7-box2-cube1">
+                    <div class="sect7-box2-cube1-img1"></div>
+
+                    <div class="sect7-box2-cube1-h3">
+                        <h3>JOHN SMITHS</h3>
+                    </div>
+
+                    <div class="sect7-box2-cube1-p">
+                        <p>Banker</p>
+                    </div>
+
+                    <div class="sect7-box2-cube1-text">
+                        <p>
+                            I recently used the barbing <br> website
+                            for my haircut, <br> and I couldn't <br>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- -------2------------- -->
+
+                <div class="sect7-box2-cube1">
+                    <div class="sect7-box2-cube1-img2"></div>
+
+                    <div class="sect7-box2-cube1-h3">
+                        <h3>ADAM STARK</h3>
+                    </div>
+
+                    <div class="sect7-box2-cube1-p">
+                        <p>Accountant</p>
+                    </div>
+
+                    <div class="sect7-box2-cube1-text">
+                        <p>
+                            The website was user-friendly <br>
+                            and easy to navigate, <br> making it simple <br>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- --------------3------------ -->
+                <div class="sect7-box2-cube1">
+                    <div class="sect7-box2-cube1-img3"></div>
+
+                    <div class="sect7-box2-cube1-h3">
+                        <h3>MAMA REAL</h3>
+                    </div>
+
+                    <div class="sect7-box2-cube1-p">
+                        <p>Receptionist</p>
+                    </div>
+
+                    <div class="sect7-box2-cube1-text">
+                        <p>
+                            The overall atmosphere of <br>
+                            the barbershop was inviting <br> and comfortable.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- =======>==>====>SECTION======8===START======== -->
+
+        <section class="sect8">
+
+            <div class="sect8-box1"></div>
+
+            <div class="sect8-box2">
+
+                <!-- <div class="form-container"> -->
+                    <!-- FORM HERE-->
+                    <form action="https://formsubmit.co/el/bazebo" class="form-container" method="POST">
+                        <div class="form-control1">
+                            <input id="name" name="name" required placeholder="Your Name">
+                        </div>
+                        <div class="form-control2">
+                            <input id="email" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-control3">
+                            <input id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-control4">
+                            <input id="message" name="message" placeholder="Message" required>
+                        </div>
+                        <div class="form-control5">
+                            <input id="submit" name="submit" placeholder="SUBMIT" value="SUBMIT" type="button">
+                        </div>
+                    </form>
+
+                <!-- </div> -->
+
+            </div>
+
+        </section>
+
+        <!-- =======>==>====>SECTION======8=====END======= -->
+
+
+
+        <!-- =======>==>====>SECTION======9====START======== -->
+
+        <section class="sect9">
+
+            <div class="sect9-box1">
+                <h3>Lastest From Blog</h3>
+                <h1>Learn More from Latest Barber <br> Blog </h1>
+            </div>
+
+
+            <div class="sect9-box2 owl-carousel">
+
+                <!-- ======== -->
+
+                <div class="sect9-box2-bx1">
+                    <div class="sect9-box2-bx1-cube11">
+                        <div class="sect9-box2-bx1-cube1-img"></div>
+                    </div>
+                    <div class="sect9-box2-bx1-cube2">
+                        <div class="sect9-box2-bx1-cube2-icon">
+                            <i class='bx bx-user'></i>
+                            <p>Hair Cut</p>
+                            <i class='bx bx-calendar'></i>
+                            <p>01-jan-2023</p>
+                        </div>
+                        <div class="sect9-box2-bx1-cube2-h3">
+                            <h3>Communication is Key</h3>
+                        </div>
+                        <div class="sect9-box2-bx1-cube2-p">
+                            <p>Clear and effective communication <br> with your barber is essential. <br> Take the
+                                opportunity to
+                            </p>
+                        </div>
+                        <div class="sect9-box2-bx1-cube2-h4">
+                            <a href="#" class="link ">
+                                <h4>READ MORE <i class='bx bxs-right-arrow'></i></h4>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ======== -->
+
+
+                <div class="sect9-box2-bx1">
+                    <div class="sect9-box2-bx1-cube22">
+                        <div class="sect9-box2-bx1-cube1-img"></div>
+                    </div>
+                    <div class="sect9-box2-bx1-cube2">
+                        <div class="sect9-box2-bx1-cube2-icon">
+                            <i class='bx bx-user'></i>
+                            <p>Bread Trim</p>
+                            <i class='bx bx-calendar'></i>
+                            <p>01-jan-2023</p>
+                        </div>
+                        <div class="sect9-box2-bx1-cube2-h3">
+                            <h3>Find Your Barber</h3>
+                        </div>
+                        <div class="sect9-box2-bx1-cube2-p">
+                            <p>The relationship between a barber <br> and client is a crucial foundation <br> for a
+                                successful barbing experience.
+                            </p>
+                        </div>
+                        <div class="sect9-box2-bx1-cube2-h4">
+                            <a href="#" class="link ">
+                                <h4>READ MORE <i class='bx bxs-right-arrow'></i></h4>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ======== -->
+
+                <div class="sect9-box2-bx1">
+                    <div class="sect9-box2-bx1-cube33">
+                        <div class="sect9-box2-bx1-cube1-img"></div>
+                    </div>
+                    <div class="sect9-box2-bx1-cube2">
+                        <div class="sect9-box2-bx1-cube2-icon">
+                            <i class='bx bx-user'></i>
+                            <p>Hair Dyeing</p>
+                            <i class='bx bx-calendar'></i>
+                            <p>01-jan-2023</p>
+                        </div>
+                        <div class="sect9-box2-bx1-cube2-h3">
+                            <h3> Pay Attention to Detail</h3>
+                        </div>
+                        <div class="sect9-box2-bx1-cube2-p">
+                            <p>Barbing is an art that thrives on precision <br>
+                                and attention to detail. A skilled <br>
+                                barber meticulously
+                            </p>
+                        </div>
+                        <div class="sect9-box2-bx1-cube2-h4">
+                            <a href="#" class="link ">
+                                <h4>READ MORE <i class='bx bxs-right-arrow'></i></h4>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- ======== -->
+
+                <div class="sect9-box2-bx1">
+                    <div class="sect9-box2-bx1-cube44">
+                        <div class="sect9-box2-bx1-cube1-img"></div>
+                    </div>
+                    <div class="sect9-box2-bx1-cube2">
+                        <div class="sect9-box2-bx1-cube2-icon">
+                            <i class='bx bx-user'></i>
+                            <p>Stacking</p>
+                            <i class='bx bx-calendar'></i>
+                            <p>01-jan-2023</p>
+                        </div>
+                        <div class="sect9-box2-bx1-cube2-h3">
+                            <h3>Regular Maintenance</h3>
+                        </div>
+                        <div class="sect9-box2-bx1-cube2-p">
+                            <p>Maintaining your hairstyle's integrity <br> requires regular maintenance and touch-ups.
+                                <br>
+                            </p>
+                        </div>
+                        <div class="sect9-box2-bx1-cube2-h4">
+                            <a href="#" class="link ">
+                                <h4>READ MORE <i class='bx bxs-right-arrow'></i></h4>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- ======== -->
+
+
+                <div class="sect9-box2-bx1">
+                    <div class="sect9-box2-bx1-cube55">
+                        <div class="sect9-box2-bx1-cube1-img"></div>
+                    </div>
+                    <div class="sect9-box2-bx1-cube2">
+                        <div class="sect9-box2-bx1-cube2-icon">
+                            <i class='bx bx-user'></i>
+                            <p>Mustache</p>
+                            <i class='bx bx-calendar'></i>
+                            <p>01-jan-2023</p>
+                        </div>
+                        <div class="sect9-box2-bx1-cube2-h3">
+                            <h3>Embrace Versatility</h3>
+                        </div>
+                        <div class="sect9-box2-bx1-cube2-p">
+                            <p>Don't be afraid to experiment and <br> try new hairstyles. Your barber can offer
+                                suggestions <br>
+                            </p>
+                        </div>
+                        <div class="sect9-box2-bx1-cube2-h4">
+                            <a href="#" class="link ">
+                                <h4>READ MORE <i class='bx bxs-right-arrow'></i></h4>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- ======== -->
+
+                <div class="sect9-box2-bx1">
+                    <div class="sect9-box2-bx1-cube66">
+                        <div class="sect9-box2-bx1-cube1-img"></div>
+                    </div>
+                    <div class="sect9-box2-bx1-cube2">
+                        <div class="sect9-box2-bx1-cube2-icon">
+                            <i class='bx bx-user'></i>
+                            <p>Hair Cut</p>
+                            <i class='bx bx-calendar'></i>
+                            <p>01-jan-2023</p>
+                        </div>
+                        <div class="sect9-box2-bx1-cube2-h3">
+                            <h3>Home Hair Care</h3>
+                        </div>
+                        <div class="sect9-box2-bx1-cube2-p">
+                            <p>Extend the longevity of your fresh barbing <br> experience by investing in quality hair
+                                care products. <br>
+                            </p>
+                        </div>
+                        <div class="sect9-box2-bx1-cube2-h4">
+                            <a href="#" class="link ">
+                                <h4>READ MORE <i class='bx bxs-right-arrow'></i></h4>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =======>==>====>SECTION======10=====start======== -->
+
+        <footer class="footer">
+
+            <div class="footer-bx1">
+
+                <div class="footer-bx1-row1">
+                    <div class="footer-bx1-row1-h1">
+                        <h1>Salon Address</h1>
+                    </div>
+                    <div class="footer-bx1-row1-text">
+                        <p><i class='bx bxs-map'></i> 32b, idowu martins, V.I, Lag.</p>
+                        <p><i class='bx bxs-phone'></i>+234-706-314-3426</p>
+                        <p><i class='bx bx-message'></i>info.cuttingcorner.com</p>
+                        <div class="footer-social-icon">
+                            <a href="#" target="_blank"><i class='bx bxl-facebook-circle'></i></a>
+                            <a href="#" target="_blank"><i class='bx bxl-twitter'></i></a>
+                            <a href="#" target="_blank"><i class='bx bxl-instagram'></i></a>
+                            <a href="#" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+                            <a href="#" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bx1-row2">
+                    <div class="footer-bx1-row2-h1">
+                        <h1>Quick Links</h1>
+                    </div>
+
+                    <div class="footer-bx1-row2-text">
+                        <a href="#">
+                            <p><i class='bx bx-right-arrow'></i> Terms of use</p>
+                        </a>
+                        <a href="#">
+                            <p><i class='bx bx-right-arrow'></i> Privacy Policy</p>
+                        </a>
+                        <a href="#">
+                            <p><i class='bx bx-right-arrow'></i>Cookies</p>
+                        </a>
+                        <a href="#">
+                            <p><i class='bx bx-right-arrow'></i> Help</p>
+                        </a>
+                        <a href="#">
+                            <p><i class='bx bx-right-arrow'></i>FAQS</p>
+                        </a>
+                    </div>
+
+
+                </div>
+
+                <div class="footer-bx1-row3">
+                    <div class="footer-bx1-row3-h1">
+                        <h1>Newsletter</h1>
+                    </div>
+                    <div class="footer-bx1-row3-text">
+                        <p>Welcome to the latest edition of our <br>
+                            Cutting corner newsletter! We're here to keep <br>
+                            you in the loop with the hottest trends, grooming <br> tips, and exclusive offers to elevate
+                            your grooming game.
+
+                        </p>
+                    </div>
+                    <div class="footer-bx1-row3-input">
+                        <input type="text" placeholder="Email goes here" required>
+                        <button type="submit">Submit</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="footer-bx2">
+                <div class="footer-bx2-row1">
+                    <p>&#169 <a href="index2.html">The Cutting Corner</a>, All Right Reserved.</p>
+                </div>
+                <div class="footer-bx2-row2">
+                    <p>Designed By<a href="#">David Augustine</a></p>
+                </div>
+
+            </div>
+
+        </footer>
+
+
+        <!-- <section class="sect11">
+     
+      <div class="slider owl-carousel">
+        <div class="sect9-box2-bx1">
+            <div class="sect9-box2-bx1-cube66">
+    <div class="sect9-box2-bx1-cube1-img"></div>
+</div>
+<div class="sect9-box2-bx1-cube2">
+    <div class="sect9-box2-bx1-cube2-icon">
+        <i class='bx bx-user'></i>
+        <p>Hair Cut</p>
+        <i class='bx bx-calendar'></i>
+        <p>01-jan-2023</p>
+    </div>
+    <div class="sect9-box2-bx1-cube2-h3">
+        <h3>blog topic here</h3>
+    </div>
+    <div class="sect9-box2-bx1-cube2-p">
+        <p>Lorem ipsum dolor sit ametconsectetur 
+             adipisicing elit.sapiente rerum
+        </p>
+    </div>
+    <div class="sect9-box2-bx1-cube2-h4">
+        <h4><a href="#">READ MORE <i class='bx bxs-right-arrow'></i></a></h4>
+    </div>
+</div>
+
+</div>
+
+
+
+<div class="sect9-box2-bx1">
+    <div class="sect9-box2-bx1-cube66">
+<div class="sect9-box2-bx1-cube1-img"></div>
+</div>
+<div class="sect9-box2-bx1-cube2">
+<div class="sect9-box2-bx1-cube2-icon">
+<i class='bx bx-user'></i>
+<p>Hair Cut</p>
+<i class='bx bx-calendar'></i>
+<p>01-jan-2023</p>
+</div>
+<div class="sect9-box2-bx1-cube2-h3">
+<h3>blog topic here</h3>
+</div>
+<div class="sect9-box2-bx1-cube2-p">
+<p>Lorem ipsum dolor sit ametconsectetur 
+     adipisicing elit.sapiente rerum
+</p>
+</div>
+<div class="sect9-box2-bx1-cube2-h4">
+<h4><a href="#">READ MORE <i class='bx bxs-right-arrow'></i></a></h4>
+</div>
+</div>
+
+</div>
+
+
+
+<div class="sect9-box2-bx1">
+    <div class="sect9-box2-bx1-cube66">
+<div class="sect9-box2-bx1-cube1-img"></div>
+</div>
+<div class="sect9-box2-bx1-cube2">
+<div class="sect9-box2-bx1-cube2-icon">
+<i class='bx bx-user'></i>
+<p>Hair Cut</p>
+<i class='bx bx-calendar'></i>
+<p>01-jan-2023</p>
+</div>
+<div class="sect9-box2-bx1-cube2-h3">
+<h3>blog topic here</h3>
+</div>
+<div class="sect9-box2-bx1-cube2-p">
+<p>Lorem ipsum dolor sit ametconsectetur 
+     adipisicing elit.sapiente rerum
+</p>
+</div>
+<div class="sect9-box2-bx1-cube2-h4">
+<h4><a href="#">READ MORE <i class='bx bxs-right-arrow'></i></a></h4>
+</div>
+</div>
+
+</div>
+
+
+
+<div class="sect9-box2-bx1">
+    <div class="sect9-box2-bx1-cube66">
+<div class="sect9-box2-bx1-cube1-img"></div>
+</div>
+<div class="sect9-box2-bx1-cube2">
+<div class="sect9-box2-bx1-cube2-icon">
+<i class='bx bx-user'></i>
+<p>Hair Cut</p>
+<i class='bx bx-calendar'></i>
+<p>01-jan-2023</p>
+</div>
+<div class="sect9-box2-bx1-cube2-h3">
+<h3>blog topic here</h3>
+</div>
+<div class="sect9-box2-bx1-cube2-p">
+<p>Lorem ipsum dolor sit ametconsectetur 
+     adipisicing elit.sapiente rerum
+</p>
+</div>
+<div class="sect9-box2-bx1-cube2-h4">
+<h4><a href="#">READ MORE <i class='bx bxs-right-arrow'></i></a></h4>
+</div>
+</div>
+
+</div>
+      </div>
+  
+</section> -->
+
+
+        <script>
+            $( ".sect9-box2" ).owlCarousel( {
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 5000, //2000ms = 2s;
+                autoplayHoverPause: true,
+            } );
+        </script>
+
+
+        <script src="script.js"></script>
+        <script src="signout.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
+
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </body>
+
+</html>

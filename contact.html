@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> The Cutting Corner Contact Us</title>
+    <!-- <link rel="stylesheet" href="css/style2.css"> -->
+    <!-- <link rel="stylesheet" href="about.html"> -->
+    <!-- <link rel="stylesheet" href="booking.css"> -->
+
+    <!-- ----------carousel-------------------- -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="contact.css">
+    <script src="index.js"></script>
+    <!-- ===== Boxicons CSS ===== -->
+
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+
+  <body>
+             <!-- --------------------scroll up---------------------------- -->
+
+<button onclick="topFunction()" id="myBtn" title="Go to top"> <i class='bx bx-chevron-up' ></i> </button>
+
+<script>
+    // Get the button
+    let mybutton = document.getElementById("myBtn");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
+    <nav>
+      <div class="navbar">
+        <i class='bx bx-menu'></i>
+        <div class="logo"><a href="index2.html">THE CUTTING CORNER</a></div>
+        <div class="nav-links">
+          <div class="sidebar-logo">
+            <span class="logo-name">THE CUTTING CORNER</span>
+            <i class='bx bx-x'></i>
+          </div>
+          <ul class="links">
+            <li><a href="index2.html">HOME</a></li>
+            <li>
+              <a href="gallery.html">GALLERY</a>
+              <ul class="htmlCss-sub-menu sub-menu">
+              </ul>
+            </li>
+
+            <li><a href="service.html">SERVICE</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+
+          </ul>
+        </div>
+        <div class="search-box">
+          <i class='bx bx-user'></i>
+          <div class="input-box">
+            <!-- <input type="text" placeholder="Search..."> -->
+            <div class="logout-section">
+              <!-- <button id="signout">Sign Out</button> -->
+              <div class="icon"><i class="bx bx-user"></i></div>
+
+              <div class="line">
+                <p id="user">Logged in as: </p>
+              </div>
+
+              <div class="field button-field">
+                <button id="signout" type="submit">Logout</button>
+              </div>
+              <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+              <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <script>
+      // search-box open close js code
+      let navbar = document.querySelector( ".navbar" );
+      let searchBox = document.querySelector( ".search-box .bx-user" );
+      // let searchBoxCancel = document.querySelector(".search-box .bx-x");
+
+      searchBox.addEventListener( "click", () =>
+      {
+        navbar.classList.toggle( "showInput" );
+        if ( navbar.classList.contains( "showInput" ) )
+        {
+          searchBox.classList.replace( "bx-user", "bx-x" );
+        } else
+        {
+          searchBox.classList.replace( "bx-x", "bx-user" );
+        }
+      } );
+
+      // sidebar open close js code
+      let navLinks = document.querySelector( ".nav-links" );
+      let menuOpenBtn = document.querySelector( ".navbar .bx-menu" );
+      let menuCloseBtn = document.querySelector( ".nav-links .bx-x" );
+      menuOpenBtn.onclick = function ()
+      {
+        navLinks.style.left = "0";
+      }
+      menuCloseBtn.onclick = function ()
+      {
+        navLinks.style.left = "-100%";
+      }
+
+
+      // sidebar submenu open close js code
+      let htmlcssArrow = document.querySelector( ".htmlcss-arrow" );
+      htmlcssArrow.onclick = function ()
+      {
+        navLinks.classList.toggle( "show1" );
+      }
+      let moreArrow = document.querySelector( ".more-arrow" );
+      moreArrow.onclick = function ()
+      {
+        navLinks.classList.toggle( "show2" );
+      }
+      let jsArrow = document.querySelector( ".js-arrow" );
+      jsArrow.onclick = function ()
+      {
+        navLinks.classList.toggle( "show3" );
+      }
+    </script>
+    <section class="contact-sect1">
+      <div class="contact-text">
+        <h1>CONTACT</h1>
+      </div>
+      <div class="contact-text2">
+        <h3><a href="index2.html">HOME</a></h3>
+        <p>/</p>
+        <h3><a href="contact.html">CONTACT</a></h3>
+
+      </div>
+    </section>
+
+    <section class="contact-sect2">
+
+      <div class="contact-info">
+        <div class="contact-info-icon">
+          <i class="bx bxs-map"></i>
+        </div>
+        <div class="contact-info-text">
+          <h2>address</h2>
+          <span>32b, Idowu Martins str</span>
+          <span>V.I , Lagos, Nigeria</span>
+        </div>
+      </div>
+
+
+      <div class="contact-info">
+        <div class="contact-info-icon">
+          <i class="bx bx-envelope"></i>
+        </div>
+        <div class="contact-info-text">
+          <h2>E-mail</h2>
+          <span>info.cuttingcorner.com</span>
+          <!-- <span>yourmail@gmail.com</span> -->
+        </div>
+      </div>
+
+
+
+      <div class="contact-info">
+        <div class="contact-info-icon">
+          <i class="bx bx-time"></i>
+        </div>
+        <div class="contact-info-text">
+          <h2>work time</h2>
+          <span>Mon - Fri 9:00 am - 9.00 pm</span>
+          <!-- <span>Thu - Mon 10.00 pm - 5.00 pm</span> -->
+        </div>
+      </div>
+      </div>
+
+
+    </section>
+    <!-- -=============-=====-=======-==== -->
+    <section class="contact-sect3">
+
+      <!-- <div class="contact-page-form" >
+              <h2>Get in Touch</h2>
+              <form action="#"  id="contactForm" method="post">
+                
+                  
+                    <div class="single-input-field">
+                 <input type="text" placeholder="Your Name" id="name" name="name" />
+                    </div>
+                  
+                    <div class="single-input-field">
+                      <input type="email" placeholder="E-mail" id="email" name="email" required />
+                    </div>
+             
+
+                    <div class="single-input-field">
+                      <input type="text" placeholder="Phone Number" id="number" name="phone" />
+                    </div>
+
+
+                    <div class="single-input-field">
+                      <input type="text" placeholder="Subject" id="subject" name="subject" />
+                    </div>
+
+
+                    <div class="single-input-field">
+                      <textarea placeholder="Write Your Message" id="message" name="message"></textarea>
+                    </div>
+
+                  <div class="single-input-fieldsbtn">
+                    <input type="submit" value="Send Now" />
+                  </div>
+
+              </form>
+            </div>-->
+
+
+
+
+
+      <div class="contact-row1">
+        <div class="contact-h1">
+          <h1>Get in Touch</h1>
+        </div>
+
+        <form action="https://formsubmit.co/el/bazebo" method="POST" class="form-page" id="contactForm">
+
+          <div class="input-field">
+            <input type="text" placeholder="Your Name" id="name" name="name" />
+          </div>
+          <div class="input-field">
+            <input type="email" placeholder="E-mail" id="email" name="email" required />
+          </div>
+          <div class="input-field">
+            <input type="text" placeholder="Phone Number" id="number" name="phone" />
+          </div>
+          <div class="input-field">
+            <input type="text" placeholder="Subject" id="subject" name="subject" />
+          </div>
+          <div class="input-field">
+            <textarea placeholder="Write Your Message" id="message" name="message"></textarea>
+          </div>
+
+          <div class="input-fieldsbtn">
+            <input type="submit" value="Send Now" />
+          </div>
+
+        </form>
+      </div>
+
+      <div class="contact-page-map">
+        <iframe
+          src="https://maps.google.com/maps?width=628&amp;height=400&amp;hl=en&amp;q=victoria island&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+          width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+    </section>
+
+
+
+
+
+
+    <!-- <-- =======>==>====>SECTION======10=====start======== -->
+
+    <footer class="footer">
+
+      <div class="footer-bx1">
+
+        <div class="footer-bx1-row1">
+          <div class="footer-bx1-row1-h1">
+            <h1>Salon Address</h1>
+          </div>
+          <div class="footer-bx1-row1-text">
+            <p><i class='bx bxs-map'></i> 32b, Idowu Martins str, V.I, Lagos</p>
+            <p><i class='bx bxs-phone'></i>+234-706-314-3426</p>
+            <p><i class='bx bx-message'></i>info.cuttingcorner.com</p>
+            <div class="footer-social-icon">
+              <a href="#" target="_blank"><i class='bx bxl-facebook-circle'></i></a>
+              <a href="#" target="_blank"><i class='bx bxl-twitter'></i></a>
+              <a href="#" target="_blank"><i class='bx bxl-instagram'></i></a>
+              <a href="#" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+              <a href="#" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bx1-row2">
+          <div class="footer-bx1-row2-h1">
+            <h1>Quick Links</h1>
+          </div>
+
+          <div class="footer-bx1-row2-text">
+            <a href="#">
+              <p><i class='bx bx-right-arrow'></i> Terms of use</p>
+            </a>
+            <a href="#">
+              <p><i class='bx bx-right-arrow'></i> Privacy Policy</p>
+            </a>
+            <a href="#">
+              <p><i class='bx bx-right-arrow'></i>Cookies</p>
+            </a>
+            <a href="#">
+              <p><i class='bx bx-right-arrow'></i> Help</p>
+            </a>
+            <a href="#">
+              <p><i class='bx bx-right-arrow'></i>FAQS</p>
+            </a>
+          </div>
+
+
+        </div>
+
+        <div class="footer-bx1-row3">
+          <div class="footer-bx1-row3-h1">
+            <h1>Newsletter</h1>
+          </div>
+          <div class="footer-bx1-row3-text">
+            <p>Welcome to the latest edition of our <br>
+              Cutting Corner newsletter! We're here to keep <br>
+              you in the loop with the hottest trends, grooming <br> tips, and exclusive offers to elevate your grooming
+              game.
+
+            </p>
+          </div>
+          <div class="footer-bx1-row3-input">
+            <input type="text" placeholder="Email goes here" required>
+            <button type="submit">Submit</button>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bx2">
+        <div class="footer-bx2-row1">
+          <p>&#169 <a href="index2.html">The Cutting Corner</a>, All Right Reserved.</p>
+        </div>
+        <div class="footer-bx2-row2">
+          <p>Designed By<a href="#">David Augustine</a></p>
+        </div>
+
+      </div>
+
+    </footer>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Message Sent</h2>
+        <p>Your message has been successfully sent.</p>
+      </div>
+    </div>
+
+
+
+    <script>
+      document.getElementById( "contactForm" ).addEventListener( "submit", function ( event )
+      {
+        event.preventDefault(); // Prevent form submission
+
+        var name = document.getElementById( "name" ).value;
+        var email = document.getElementById( "email" ).value;
+        var number = document.getElementById( "number" ).value;
+        var subject = document.getElementById( "subject" ).value;
+        var message = document.getElementById( "message" ).value;
+
+        // Perform form validation
+        if ( name.trim() === "" || email.trim() === "" || number.trim() === "" || subject.trim() === "" || message.trim() === "" )
+        {
+          alert( "Please fill in all fields" );
+          return;
+        }
+
+        // Display the success modal box
+        var modal = document.getElementById( "modal" );
+        modal.style.display = "block";
+
+        // Reset the form
+        document.getElementById( "contactForm" ).reset();
+      } );
+
+      function closeModal ()
+      {
+        var modal = document.getElementById( "modal" );
+        modal.style.display = "none";
+      }
+
+    </script>
+    <script src="signout.js"></script>
+  </body>
+
+</html>

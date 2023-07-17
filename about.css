@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,100&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Josefin sans;
+}
+
+
+.contact-sect1 {
+    width: 100%;
+    height: 400px;
+    background-color: #fbeee6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #da5908;
+}
+
+.contact-text h1 {
+    width: 100%;
+    /* background-color: gray; */
+    font-size: 50px;
+
+}
+
+
+
+.contact-text2 {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    /* height: 100px; */
+    gap: 10px;
+    display: flex;
+}
+
+
+.contact-text2 h3 a {
+    text-decoration: none;
+    color: #da5908;
+}
+
+.contact-text2 h3 a:active {
+    color: #1a0303;
+    ;
+}
+
+
+
+
+.box2-bottom-text2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.box2-bottom {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.git{
+    width: 100%;
+    height: 200px;
+    background-color: #fbeee6;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0.9em;
+}
+
+.git1 h1 {
+    color: #1E1E1E;
+    font-size: 40px;
+    margin-left: .6em;
+}
+
+.git2 a button {
+    font-size: 20px;
+    padding: 10px;
+    width: 300px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:800px) {
+    .git {
+        justify-content: space-around;
+        height: 150px;
+    }
+
+    .git1 h1 {
+        font-size: 50px;
+    }
+
+    .git2 a button {
+        font-size: 25px;
+        width: 250px;
+    }
+
+}
